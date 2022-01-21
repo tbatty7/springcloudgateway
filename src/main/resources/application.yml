@@ -5,9 +5,9 @@ spring:
         - id: baeldung_route
           uri: http://baeldung.com
           predicates:
-            - Path=/baeldung/cloud/**
+            - Path=/baeldung/gateway/**
           filters:
-            - RewritePath=/baeldung/cloud/(?<RID>.*), /spring-cloud-gateway/$\{RID}
+            - RewritePath=/baeldung/gateway/(?<RID>.*), /spring-cloud-gateway/$\{RID}
 management:
   endpoints:
     web:
